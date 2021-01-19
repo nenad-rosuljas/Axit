@@ -1,0 +1,305 @@
+.c-header {
+  background-image: url("/Axit/assets/images/img-bg-header.png");
+  background-color: rgba(0, 0, 0, 0.9);
+  background-size: cover;
+  height: 100vh;
+}
+
+.c-header__nav {
+  background-color: $color-black-primary;
+  padding: 0 2rem;
+  border-radius: 0 0.3rem 0.3rem 0;
+  display: none;
+
+  @include from($tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include between($tablet, $desktop) {
+    padding: 0 3.3rem;
+  }
+
+  @include between($desktop, 1440px) {
+    padding: 0 5.3rem;
+  }
+
+  @include from(1400px) {
+    padding: 0 9.3rem;
+  }
+}
+
+.c-header__nav-logo {
+  justify-self: flex-start;
+  padding: 1.4rem 0;
+  color: $color-white-primary;
+  font-size: 1.69rem;
+  font-family: $font-secondary-bold;
+
+  span {
+    padding: 1.4rem 0;
+    font-family: $font-primary-light;
+    font-size: 1.69rem;
+    color: $color-orange-primary;
+  }
+}
+
+.c-header__nav-links {
+  padding: 0;
+
+  @include from($tablet) {
+    justify-self: flex-end;
+    padding: 1.875rem 0;
+  }
+}
+
+.c-header__link-item {
+  padding-left: 3rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: $font-secondary-semi-bold;
+  color: $color-white-primary;
+
+  @include until($tablet) {
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  &:hover {
+    color: $color-orange-primary;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
+
+.c-header__container {
+  padding: 3rem 2rem 5.3rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  @include from($tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include between($tablet, $desktop) {
+    padding: 5rem 3.3rem 7.3rem 3.3rem;
+  }
+
+  @include between($desktop, 1440px) {
+    padding: 7rem 5.3rem 9.3rem 5.3rem;
+  }
+
+  @include from(1400px) {
+    padding: 7rem 9.3rem 9.3rem 9.3rem;
+  }
+}
+
+.c-header__container-inner-one {
+  justify-self: center;
+
+  @include from($tablet) {
+    justify-self: flex-start;
+    max-width: 33rem;
+  }
+}
+
+.c-header__container-inner-two {
+  justify-self: center;
+  padding-top: 3rem;
+
+  @include from($tablet) {
+    justify-self: flex-end;
+    padding: 3rem 0 0 1.5rem;
+  }
+}
+
+.c-header__nav-logo--big {
+  font-size: 2.75rem;
+  padding: 0;
+
+  @include from($tablet) {
+    font-size: 3.75rem;
+  }
+
+  .c-header__logo-span {
+    font-size: 2.75rem;
+    padding: 0;
+
+    @include from($tablet) {
+      font-size: 3.75rem;
+    }
+  }
+}
+
+.c-header__heading {
+  font-size: 1.7rem;
+  font-family: $font-primary-light;
+  color: $color-white-primary;
+  text-transform: uppercase;
+
+  @include from($tablet) {
+    font-size: 2.25rem;
+  }
+}
+
+.c-divider {
+  width: 4rem;
+  border-bottom: 2px solid;
+  margin: 1.875rem 0;
+}
+
+.c-divider--white {
+  border-color: $color-white-primary;
+}
+
+.c-header__description {
+  font-size: 1rem;
+  line-height: 1.44;
+  font-family: $font-primary-light;
+  color: $color-white-primary;
+  margin-bottom: 2.75rem;
+}
+
+.c-button {
+  font-size: 0.94rem;
+  font-family: $font-secondary-semi-bold;
+  height: 2.875rem;
+  width: 7.56rem;
+  color: $color-white-primary;
+  border: 2px solid $color-white-primary;
+  text-align: center;
+  padding: 0.7rem;
+}
+
+.c-header__button--transparent {
+  background-color: transparent;
+}
+
+.c-header__sign-up {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+
+.c-header__card-heading {
+  background-color: $color-grey-other;
+  color: $color-black-secondary;
+  padding: 1rem 1.25rem;
+  font-size: 1.25rem;
+  font-family: $font-primary-semi-bold;
+  text-align: center;
+}
+
+.c-header__sign-up-span {
+  font-size: 1.25rem;
+  font-family: $font-primary-semi-bold;
+  color: $color-orange-primary;
+}
+
+.c-header__input-list {
+  display: flex;
+  flex-direction: column;
+  padding: 2.9rem 2.5rem;
+  background-color: $color-white-primary;
+}
+
+.c-header__input-item {
+  padding: 0 0 0.5rem 0.875rem;
+  font-size: 0.875rem;
+  font-family: $font-secondary-regular;
+  color: $color-grey-primary;
+  border: none;
+  border-bottom: 1px solid $color-grey-primary;
+
+  &:not(:first-of-type) {
+    padding-top: 2.5rem;
+  }
+}
+
+.c-header__sign-up-button {
+  background-color: $color-orange-primary;
+  color: $color-white-primary;
+  font-size: 0.94rem;
+  font-family: $font-secondary-semi-bold;
+  padding: 1.3rem;
+  text-align: center;
+}
+
+// BRAND PANEL
+
+.c-header__brand-panel {
+  background-color: $color-white-primary;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  @include flex-column-center;
+
+  @include from($tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: unset;
+    padding: 1rem 2rem;
+  }
+
+  @include between($tablet, $desktop) {
+    padding: 1rem 3.3rem;
+  }
+
+  @include between($desktop, 1440px) {
+    padding: 1rem 5.3rem;
+  }
+
+  @include from(1400px) {
+    padding: 1rem 9.3rem;
+  }
+}
+
+.c-header__textual {
+  max-width: 20rem;
+
+  @include from($tablet) {
+    justify-self: flex-start;
+  }
+
+  @include from($desktop) {
+    max-width: 25rem;
+  }
+}
+
+.c-header__bp-heading {
+  font-size: 1.25rem;
+  font-family: $font-secondary-bold;
+  color: $color-black-secondary;
+}
+
+.c-header__bp-icon-group {
+  padding: 1.2rem 0;
+
+  @include from($tablet) {
+    justify-self: flex-end;
+  }
+
+  .icon {
+    fill: $color-grey-other;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    @include from(870px) {
+      width: 2.375rem;
+      height: 2.375rem;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 1.5rem;
+
+      @include from($desktop-large) {
+        margin-right: 3rem;
+      }
+    }
+  }
+}
