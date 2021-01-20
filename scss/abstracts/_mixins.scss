@@ -1,0 +1,80 @@
+@import "variables";
+
+@mixin main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+@mixin content-center {
+  padding: 0 9.3rem;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// MEDIA QUERIES
+@mixin until($width) {
+  @if ($width == 768) {
+    @media (max-width: $width - 1) {
+      @content;
+    }
+  }
+  @if ($width != 768) {
+    @media (max-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin from($width) {
+  @if ($width == 768) {
+    @media (min-width: $width) {
+      @content;
+    }
+  }
+  @if ($width != 768) {
+    @media (min-width: $width + 1) {
+      @content;
+    }
+  }
+}
+
+@mixin between($from, $to) {
+  @media (min-width: $from) and (max-width: $to) {
+    @content;
+  }
+}
+
+// from 768px to 1024px
+@mixin tablet() {
+  @include between($tablet, $desktop) {
+    @content;
+  }
+}
+
+// from 1025px to 1200px
+@mixin desktop() {
+  @include between($desktop + 1, $desktop-large) {
+    @content;
+  }
+}
+
+// from 1201px to 1366px
+@mixin desktop-large() {
+  @include between($desktop-large + 1, $wide-screen) {
+    @content;
+  }
+}
+
+// from 1367px
+@mixin wide-screen() {
+  @include from($wide-screen) {
+    @content;
+  }
+}
