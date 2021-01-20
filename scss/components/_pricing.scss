@@ -1,0 +1,115 @@
+.c-pricing {
+  background-color: $color-grey-other;
+  padding: 2.25rem 1.5rem 2.25rem 1.5rem;
+  text-align: center;
+
+  @include between($tablet, $desktop) {
+    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
+  }
+
+  @include between($desktop, $desktop-large) {
+    padding: 3.25rem 5.3rem 3.125rem 5.3rem;
+  }
+
+  @include between($desktop-large, 1400px) {
+    padding: 4.25rem 5.3rem 5.125rem 5.3rem;
+  }
+
+  @include from(1400px) {
+    padding: 6.75rem 9.3rem 7.125rem 9.3rem;
+  }
+
+  .c-divider--orange {
+    margin: 1.875rem auto;
+  }
+}
+
+.c-pricing__group {
+  @include flex-column-center;
+
+  @include from($tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 2.5rem;
+  }
+}
+
+.c-pricing__card-group {
+  padding-top: 2rem;
+  width: 100%;
+  max-width: 23.3rem;
+
+  @include from($tablet) {
+    &:not(:last-of-type) {
+      margin-right: 2.5rem;
+    }
+  }
+}
+
+.c-pricing__card-heading {
+  color: $color-white-primary;
+  background-color: $color-black-secondary;
+  padding: 1.2rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid $color-white-primary;
+}
+
+.c-pricing__card-price {
+  font-size: 3.75rem;
+  line-height: 1;
+  padding: 1rem;
+  font-family: $font-primary-semi-bold;
+  background-color: $color-black-secondary;
+  color: $color-white-primary;
+
+  .c-price-sign {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: $font-primary-semi-bold;
+    color: $color-white-primary;
+  }
+}
+
+.c-price-text {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding-bottom: 1rem;
+  font-family: $font-secondary-regular;
+  color: $color-grey-other;
+  font-style: italic;
+  background-color: $color-black-secondary;
+  border-bottom: 5px solid $color-orange-primary;
+}
+
+.c-pricing__card-popular {
+  .c-price-text {
+    border-bottom: none;
+  }
+}
+
+.c-pricing__offer {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: $color-white-primary;
+  font-family: $font-secondary-bold;
+  text-transform: uppercase;
+  padding: 0.875rem 0;
+  background-color: $color-orange-primary;
+}
+
+.c-pricing__card-list {
+  list-style: none;
+  background-color: $color-white-primary;
+
+  li {
+    border: 1px solid $color-grey-other;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    color: $color-grey-secondary;
+    font-family: $font-secondary-regular;
+    text-transform: uppercase;
+    padding: 0.875rem;
+  }
+}

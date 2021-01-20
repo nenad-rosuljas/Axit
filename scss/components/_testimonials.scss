@@ -1,0 +1,105 @@
+.c-testimonials {
+  padding: 2.25rem 1.5rem 2.25rem 1.5rem;
+  text-align: center;
+  @include flex-column-center;
+
+  @include between($tablet, $desktop) {
+    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
+  }
+
+  @include between($desktop, $desktop-large) {
+    padding: 3.25rem 5.3rem 3.125rem 5.3rem;
+  }
+
+  @include between($desktop-large, 1400px) {
+    padding: 4.25rem 5.3rem 5.125rem 5.3rem;
+  }
+
+  @include from(1400px) {
+    padding: 6.75rem 9.3rem 7.125rem 9.3rem;
+  }
+}
+
+.c-testimonials__group {
+  @include flex-column-center;
+
+  @include from($tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+  }
+}
+
+.c-testimonials__comment-group {
+  padding-top: 1.5rem;
+  width: 100%;
+  max-width: 17rem;
+
+  @include between($tablet, $desktop) {
+    &:not(:last-of-type) {
+      margin-right: 3.5rem;
+    }
+  }
+
+  @include between($desktop, $desktop-large) {
+    &:not(:last-of-type) {
+      margin-right: 5.5rem;
+    }
+  }
+
+  @include from($desktop-large) {
+    &:not(:last-of-type) {
+      margin-right: 7.5rem;
+    }
+  }
+}
+
+.c-testimonials__comment {
+  background-color: $color-grey-other;
+  padding: 1.5rem 0.75rem;
+  position: relative;
+
+  .c-testimonials__triangle {
+    width: 0;
+    height: 0;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-top: 1.25rem solid $color-grey-other;
+    position: absolute;
+    bottom: 0%;
+    margin-bottom: -1rem;
+    left: 0;
+    margin-left: 1.5rem;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 1;
+    font-style: italic;
+  }
+}
+
+.c-testimonials__customer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+
+  .c-testimonials__img {
+    margin-right: 1rem;
+  }
+
+  .c-testimonials__person {
+    .c-testimonials__name {
+      font-size: 1.25rem;
+      font-family: $font-secondary-bold;
+      color: $color-black-secondary;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+* {
+  @include main;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: $color-grey-secondary;
+  font-family: $font-secondary-regular;
+}
