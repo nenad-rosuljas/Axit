@@ -1,126 +1,79 @@
+// CONTAINER ONE
+
 .c-features__container-one {
   padding: 2.25rem 1.5rem 2.25rem 1.5rem;
   background-color: $color-grey-other;
   text-align: center;
-  @include flex-column-center;
+  margin: 0 auto;
 
   img {
     margin-left: 0;
-
-    @include between($tablet, $desktop) {
-      margin-left: 3rem;
-    }
-
-    @include from($desktop) {
-      margin-left: 6rem;
-    }
+    width: 100%;
+    max-width: 32rem;
+    max-height: 23rem;
   }
 
   p {
     margin: 1.5rem 0;
 
-    @include from($tablet) {
-      margin: 3.6rem 0 1.5rem 0;
-    }
-
     &:last-of-type {
       margin: 0 0 3rem 0;
     }
   }
-
-  @include from($tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: unset;
-  }
-
-  @include between($tablet, $desktop) {
-    padding: 3.25rem 3.5rem 2.125rem 3.5rem;
-  }
-
-  @include between($desktop, $desktop-large) {
-    padding: 5.25rem 5.3rem 3.125rem 5.3rem;
-  }
-
-  @include between($desktop-large, 1400px) {
-    padding: 7.25rem 5.3rem 5.125rem 5.3rem;
-  }
-
-  @include from(1400px) {
-    padding: 9.25rem 9.3rem 7.125rem 9.3rem;
-  }
 }
 
 .c-features__tab-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.c-tab-content {
+  display: none;
+}
+
+#tab-1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.c-features__tab-button {
   background-color: $color-grey-secondary;
+  padding: 1.375rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $color-grey-other;
   font-size: 0.94rem;
   line-height: 1.25;
   color: $color-white-primary;
   font-family: $font-secondary-bold;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  text-decoration: none;
+  outline: none;
+  transition: 0.3s;
 
-  @include from($tablet) {
-    display: flex;
-    flex-direction: column;
-    margin-right: 2rem;
-  }
-
-  @include between($tablet, $desktop) {
-    margin-right: 3rem;
-    max-height: 21rem;
-  }
-
-  @include from($desktop) {
-    margin-right: 6rem;
-    max-height: 21rem;
-  }
-
-  .current {
-    background-color: $color-orange-primary;
+  &:hover {
+    background-color: $color-black-primary;
+    cursor: pointer;
   }
 }
-
-.c-features__tab-button {
-  width: 4rem;
-  height: 4rem;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 1.5rem 0;
-  border-right: 1px solid $color-grey-other;
-
-  @include from($tablet) {
-    border-bottom: 1px solid $color-grey-other;
-    padding: 3rem 0;
-    width: 7rem;
-    height: 7rem;
-  }
+.c-features__tab-button.current {
+  background-color: $color-orange-primary;
 }
 
 .c-features__heading {
   font-size: 1.25rem;
   font-family: $font-secondary-bold;
   margin: 1rem 0 1rem 0;
-
-  @include from($tablet) {
-    margin: 0 0 1.8rem 0;
-  }
 }
 
 .c-features__button--orange {
   background-color: $color-orange-primary;
   margin: 1rem auto;
+  transition: 0.3s;
 
   &:hover {
-    transition: 0.3s;
     background-color: $color-black-primary;
     cursor: pointer;
-  }
-
-  @include from($tablet) {
-    margin: 0;
   }
 
   a {
@@ -134,28 +87,13 @@
 .c-features__container-two {
   padding: 2.25rem 1.5rem 2.25rem 1.5rem;
   text-align: center;
-  @include flex-column-center;
+  margin: 0 auto;
 
   .c-features-img {
     margin-right: 0;
-    width: 22rem;
-    height: 13rem;
-
-    @include between($tablet, $desktop) {
-      margin-right: 3rem;
-      width: 22rem;
-      height: 13rem;
-    }
-
-    @include from($desktop) {
-      margin-right: 3rem;
-      width: 32rem;
-      height: 23rem;
-    }
-
-    @include from($desktop-large) {
-      margin-right: 6rem;
-    }
+    width: 100%;
+    max-width: 32rem;
+    max-height: 23rem;
   }
 
   h5 {
@@ -163,45 +101,10 @@
     font-family: $font-secondary-semi-bold;
     color: $color-black-other;
     margin: 1rem 0 0.5rem 0;
-
-    @include between($desktop, $desktop-large) {
-      margin: 2rem 0 0.5rem 0;
-    }
-
-    @include from($desktop-large) {
-      margin: 2.875rem 0 0.5rem 0;
-    }
-  }
-
-  @include from($tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: unset;
-  }
-
-  @include between($tablet, $desktop) {
-    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
-  }
-
-  @include between($desktop, $desktop-large) {
-    padding: 3.25rem 5.3rem 3.125rem 5.3rem;
-  }
-
-  @include between($desktop-large, 1400px) {
-    padding: 4.25rem 5.3rem 5.125rem 5.3rem;
-  }
-
-  @include from(1400px) {
-    padding: 6.75rem 9.3rem 7.125rem 9.3rem;
   }
 
   .c-divider--orange {
     margin: 1.875rem auto;
-
-    @include from($tablet) {
-      margin: 1.875rem 0;
-    }
   }
 }
 
@@ -211,9 +114,9 @@
 }
 
 .c-features__icon--small {
-  width: 5rem;
-  height: 2.5rem;
-  padding: 0.3rem 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
 }
 
 .c-features__icon--small-image {
@@ -231,10 +134,6 @@
 .c-features__icon-description {
   margin-left: 1rem;
   text-align: left;
-
-  @include from($tablet) {
-    margin-left: 1.875rem;
-  }
 }
 
 .c-divider--orange {
@@ -247,66 +146,232 @@
   padding: 2.25rem 1.5rem 2.125rem 1.5rem;
   background-color: $color-grey-other;
   text-align: center;
-  @include flex-column-center;
+  margin: 0 auto;
 
   img {
     margin-left: 0;
-    width: 22rem;
-    height: 13rem;
-
-    @include between($tablet, $desktop) {
-      margin-left: 3rem;
-      width: 22rem;
-      height: 13rem;
-    }
-
-    @include from($desktop) {
-      margin-left: 3rem;
-      width: 32rem;
-      height: 23rem;
-    }
-
-    @include from($desktop-large) {
-      margin-left: 6rem;
-    }
+    width: 100%;
+    max-width: 32rem;
+    max-height: 23rem;
   }
 
   p {
     margin: 1rem 0;
+  }
 
+  .c-divider--orange {
+    margin: 1.875rem auto;
+  }
+}
+
+// ==============================================================================================
+// ==============================================================================================
+// MEDIA QUERIES
+
+//==== FROM TABLET ================================================================
+.c-features__container-one {
+  @include from($tablet) {
+    display: grid;
+    grid-template-columns: 7rem 1fr 1fr;
+    align-items: center;
+    text-align: unset;
+  }
+
+  p {
+    @include from($tablet) {
+      margin: 3.6rem 0 1.5rem 0;
+    }
+  }
+}
+
+.c-features__tab-group {
+  @include from($tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.c-features__tab-button {
+  @include from($tablet) {
+    padding: 2.7rem 2rem;
+  }
+}
+
+.c-features__heading {
+  @include from($tablet) {
+    margin: 0 0 1.8rem 0;
+  }
+}
+
+.c-features__button--orange {
+  @include from($tablet) {
+    margin: 0;
+  }
+}
+
+.c-features__container-two {
+  @include from($tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    align-items: center;
+    text-align: unset;
+  }
+
+  img {
+    justify-self: start;
+  }
+
+  .c-divider--orange {
+    @include from($tablet) {
+      margin: 1.875rem 0;
+    }
+  }
+}
+
+.c-features__icon-description {
+  @include from($tablet) {
+    margin-left: 1.875rem;
+  }
+}
+
+.c-features__container-three {
+  @include from($tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    align-items: center;
+    text-align: unset;
+  }
+
+  img {
+    justify-self: end;
+  }
+
+  p {
     @include from($tablet) {
       margin: 2rem 0 1.5rem 0;
     }
   }
 
-  @include from($tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: unset;
-  }
-
-  @include between($tablet, $desktop) {
-    padding: 2.25rem 1.5rem 2.25rem 1.5rem;
-  }
-
-  @include between($desktop, $desktop-large) {
-    padding: 3.25rem 3.3rem 3.125rem 3.3rem;
-  }
-
-  @include between($desktop-large, 1400px) {
-    padding: 4.25rem 5.3rem 5.125rem 5.3rem;
-  }
-
-  @include from(1400px) {
-    padding: 6.75rem 9.3rem 7.125rem 9.3rem;
-  }
-
   .c-divider--orange {
-    margin: 1.875rem auto;
-
     @include from($tablet) {
       margin: 1.875rem 0;
     }
+  }
+}
+//==== BETWEEN TABLET AND DESKTOP ============================================================
+.c-features__container-one {
+  @include between($tablet, $desktop) {
+    padding: 3.25rem 3.5rem 2.125rem 3.5rem;
+    column-gap: 3rem;
+  }
+
+  // img {
+  //   @include between($tablet, $desktop) {
+  //     margin-left: 3rem;
+  //   }
+  // }
+}
+
+// .c-features__tab-group {
+//   @include between($tablet, $desktop) {
+//     margin-right: 3rem;
+//     max-height: 21rem;
+//   }
+// }
+
+.c-features__container-two {
+  @include between($tablet, $desktop) {
+    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
+  }
+}
+
+.c-features__container-three {
+  @include between($tablet, $desktop) {
+    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
+  }
+}
+//==== FROM DESKTOP ============================================================
+.c-features__container-one {
+  column-gap: 6rem;
+  img {
+    @include from($desktop) {
+      justify-self: end;
+    }
+  }
+}
+
+.c-features__tab-group {
+  @include from($desktop) {
+    justify-self: start;
+  }
+}
+//==== BETWEEN DESKTOP AND DESKTOP-LARGE ============================================================
+.c-features__container-one {
+  @include between($desktop, $desktop-large) {
+    padding: 5.25rem 5.3rem 3.125rem 5.3rem;
+  }
+}
+
+.c-features__container-two {
+  @include between($desktop, $desktop-large) {
+    padding: 3.25rem 5.3rem 3.125rem 5.3rem;
+  }
+
+  h5 {
+    @include between($desktop, $desktop-large) {
+      margin: 2rem 0 0.5rem 0;
+    }
+  }
+}
+
+.c-features__container-three {
+  @include between($desktop, $desktop-large) {
+    padding: 3.25rem 5.3rem 3.125rem 5.3rem;
+  }
+}
+//==== FROM DESKTOP-LARGE ============================================================
+.c-features__container-two {
+  h5 {
+    @include from($desktop-large) {
+      margin: 2.875rem 0 0.5rem 0;
+    }
+  }
+}
+//==== BETWEEN DESKTOP-LARGE AND 1400px ============================================================
+.c-features__container-one {
+  @include between($desktop-large, 1400px) {
+    padding: 7.25rem 5.3rem 5.125rem 5.3rem;
+  }
+}
+
+.c-features__container-two {
+  @include between($desktop-large, 1400px) {
+    padding: 4.25rem 5.3rem 5.125rem 5.3rem;
+  }
+}
+
+.c-features__container-three {
+  @include between($desktop-large, 1400px) {
+    padding: 4.25rem 5.3rem 5.125rem 5.3rem;
+  }
+}
+//==== FROM 1400px ============================================================
+.c-features__container-one {
+  @include from(1400px) {
+    padding: 9.25rem 9.3rem 7.125rem 9.3rem;
+  }
+}
+
+.c-features__container-two {
+  @include from(1400px) {
+    padding: 6.75rem 9.3rem 7.125rem 9.3rem;
+  }
+}
+
+.c-features__container-three {
+  @include from(1400px) {
+    padding: 6.75rem 9.3rem 7.125rem 9.3rem;
   }
 }

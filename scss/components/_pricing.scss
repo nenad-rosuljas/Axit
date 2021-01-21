@@ -3,49 +3,17 @@
   padding: 2.25rem 1.5rem 2.25rem 1.5rem;
   text-align: center;
 
-  @include between($tablet, $desktop) {
-    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
-  }
-
-  @include between($desktop, $desktop-large) {
-    padding: 3.25rem 5.3rem 3.125rem 5.3rem;
-  }
-
-  @include between($desktop-large, 1400px) {
-    padding: 4.25rem 5.3rem 5.125rem 5.3rem;
-  }
-
-  @include from(1400px) {
-    padding: 6.75rem 9.3rem 7.125rem 9.3rem;
-  }
-
   .c-divider--orange {
     margin: 1.875rem auto;
-  }
-}
-
-.c-pricing__group {
-  @include flex-column-center;
-
-  @include from($tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-top: 2.5rem;
   }
 }
 
 .c-pricing__card-group {
   padding-top: 2rem;
   width: 100%;
-  max-width: 23.3rem;
-
-  @include from($tablet) {
-    &:not(:last-of-type) {
-      margin-right: 2.5rem;
-    }
-  }
+  max-width: 21.3rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .c-pricing__card-heading {
@@ -111,5 +79,62 @@
     font-family: $font-secondary-regular;
     text-transform: uppercase;
     padding: 0.875rem;
+  }
+}
+
+// ==============================================================================================
+// ==============================================================================================
+// MEDIA QUERIES
+
+//==== FROM TABLET ================================================================
+.c-pricing__group {
+  @include from($tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2.5rem;
+    align-items: flex-end;
+    padding-top: 2.5rem;
+  }
+}
+//==== BETWEEN TABLET AND DESKTOP ============================================================
+.c-pricing {
+  @include between($tablet, $desktop) {
+    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
+  }
+}
+
+.c-pricing__group {
+  @include between($tablet, $desktop) {
+    column-gap: 3.5rem;
+  }
+}
+//==== BETWEEN DESKTOP AND DESKTOP-LARGE ============================================================
+.c-pricing {
+  @include between($desktop, $desktop-large) {
+    padding: 3.25rem 5.3rem 3.125rem 5.3rem;
+  }
+}
+
+.c-pricing__group {
+  @include between($desktop, $desktop-large) {
+    column-gap: 5.5rem;
+  }
+}
+//==== BETWEEN DESKTOP-LARGE AND 1400px ============================================================
+.c-pricing {
+  @include between($desktop-large, 1400px) {
+    padding: 4.25rem 5.3rem 5.125rem 5.3rem;
+  }
+}
+//==== FROM DESKTOP-LARGE ============================================================
+.c-pricing__group {
+  @include from($desktop-large) {
+    column-gap: 7.5rem;
+  }
+}
+//==== FROM 1400px ============================================================
+.c-pricing {
+  @include from(1400px) {
+    padding: 6.75rem 9.3rem 7.125rem 9.3rem;
   }
 }

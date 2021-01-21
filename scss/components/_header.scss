@@ -1,8 +1,7 @@
 .c-header {
-  background-image: url("/Axit/assets/images/img-bg-header.png");
+  background-image: url("/assets/images/img-bg-header.png");
   background-color: rgba(0, 0, 0, 0.9);
   background-size: cover;
-  height: 100vh;
 }
 
 .c-header__nav {
@@ -10,24 +9,6 @@
   padding: 0 2rem;
   border-radius: 0 0.3rem 0.3rem 0;
   display: none;
-
-  @include from($tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  @include between($tablet, $desktop) {
-    padding: 0 3.3rem;
-  }
-
-  @include between($desktop, 1440px) {
-    padding: 0 5.3rem;
-  }
-
-  @include from(1400px) {
-    padding: 0 9.3rem;
-  }
 }
 
 .c-header__nav-logo {
@@ -47,11 +28,6 @@
 
 .c-header__nav-links {
   padding: 0;
-
-  @include from($tablet) {
-    justify-self: flex-end;
-    padding: 1.875rem 0;
-  }
 }
 
 .c-header__link-item {
@@ -60,12 +36,6 @@
   font-size: 0.875rem;
   font-family: $font-secondary-semi-bold;
   color: $color-white-primary;
-
-  @include until($tablet) {
-    display: block;
-    text-align: center;
-    padding: 1rem 0;
-  }
 
   &:hover {
     color: $color-orange-primary;
@@ -78,60 +48,24 @@
   padding: 3rem 2rem 5.3rem 2rem;
   display: flex;
   flex-direction: column;
-
-  @include from($tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  @include between($tablet, $desktop) {
-    padding: 5rem 3.3rem 7.3rem 3.3rem;
-  }
-
-  @include between($desktop, 1440px) {
-    padding: 7rem 5.3rem 9.3rem 5.3rem;
-  }
-
-  @include from(1400px) {
-    padding: 7rem 9.3rem 9.3rem 9.3rem;
-  }
 }
 
 .c-header__container-inner-one {
   justify-self: center;
-
-  @include from($tablet) {
-    justify-self: flex-start;
-    max-width: 33rem;
-  }
 }
 
 .c-header__container-inner-two {
   justify-self: center;
   padding-top: 3rem;
-
-  @include from($tablet) {
-    justify-self: flex-end;
-    padding: 3rem 0 0 1.5rem;
-  }
 }
 
 .c-header__nav-logo--big {
   font-size: 2.2rem;
   padding: 0;
 
-  @include from($tablet) {
-    font-size: 3.75rem;
-  }
-
   .c-header__logo-span {
     font-size: 2.2rem;
     padding: 0;
-
-    @include from($tablet) {
-      font-size: 3.75rem;
-    }
   }
 }
 
@@ -140,10 +74,6 @@
   font-family: $font-primary-light;
   color: $color-white-primary;
   text-transform: uppercase;
-
-  @include from($tablet) {
-    font-size: 2.25rem;
-  }
 }
 
 .c-divider {
@@ -162,12 +92,6 @@
   font-family: $font-primary-light;
   color: $color-white-primary;
   margin-bottom: 2rem;
-
-  @include from($tablet) {
-    font-size: 1rem;
-    line-height: 1.44;
-    margin-bottom: 2.75rem;
-  }
 }
 
 .c-header__buttons {
@@ -188,9 +112,9 @@
 
 .c-header__button--transparent {
   background-color: transparent;
+  transition: 0.3s;
 
   &:hover {
-    transition: 0.3s;
     background-color: $color-grey-primary;
     cursor: pointer;
   }
@@ -205,38 +129,14 @@
 
 .c-header__card-heading {
   display: none;
-
-  @include from($tablet) {
-    display: inline-block;
-    background-color: $color-grey-other;
-    color: $color-black-secondary;
-    padding: 1rem 1.25rem;
-    font-size: 1.25rem;
-    font-family: $font-primary-semi-bold;
-    text-align: center;
-  }
 }
 
 .c-header__sign-up-span {
   display: none;
-
-  @include from($tablet) {
-    display: inline-block;
-    font-size: 1.25rem;
-    font-family: $font-primary-semi-bold;
-    color: $color-orange-primary;
-  }
 }
 
 .c-header__input-list {
   display: none;
-
-  @include from($tablet) {
-    display: flex;
-    flex-direction: column;
-    padding: 2.9rem 2.5rem;
-    background-color: $color-white-primary;
-  }
 }
 
 .c-header__input-item {
@@ -246,6 +146,7 @@
   color: $color-grey-primary;
   border: none;
   border-bottom: 1px solid $color-grey-primary;
+  outline: none;
 
   &:not(:first-of-type) {
     padding-top: 2.5rem;
@@ -259,53 +160,26 @@
   font-family: $font-secondary-semi-bold;
   padding: 1.3rem;
   text-align: center;
+  border: none;
+  transition: 0.3s;
 
   &:hover {
-    transition: 0.3s;
     background-color: $color-black-primary;
     cursor: pointer;
   }
 }
 
-// BRAND PANEL
+// BRAND PANEL =============================================================================================
 
 .c-header__brand-panel {
   background-color: $color-white-primary;
   padding: 1rem 1.5rem;
   text-align: center;
   @include flex-column-center;
-
-  @include from($tablet) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: unset;
-    padding: 1.5rem 1.5rem;
-  }
-
-  @include between($tablet, $desktop) {
-    padding: 1.5rem 3.5rem;
-  }
-
-  @include between($desktop, 1400px) {
-    padding: 1.5rem 5.3rem;
-  }
-
-  @include from(1400px) {
-    padding: 1.5rem 9.3rem;
-  }
 }
 
 .c-header__textual {
   max-width: 20rem;
-
-  @include from($tablet) {
-    justify-self: flex-start;
-  }
-
-  @include from($desktop) {
-    max-width: 25rem;
-  }
 }
 
 .c-header__bp-heading {
@@ -317,26 +191,250 @@
 .c-icon-group {
   padding: 1.2rem 0;
 
-  @include from($tablet) {
-    justify-self: flex-end;
-  }
-
   .icon {
-    fill: $color-grey-primary;
     width: 1.5rem;
     height: 1.5rem;
 
+    &:not(:last-of-type) {
+      margin-right: 1.5rem;
+    }
+
+    a {
+      fill: $color-grey-primary;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      cursor: pointer;
+      a {
+        fill: $color-orange-primary;
+      }
+    }
+  }
+}
+
+// ==============================================================================================
+// ==============================================================================================
+// MEDIA QUERIES
+
+//==== UNTIL TABLET ================================================================
+
+.c-header__link-item {
+  @include until($tablet) {
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+//==== FROM TABLET ================================================================
+
+.c-header__nav {
+  @include from($tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.c-header__nav-links {
+  @include from($tablet) {
+    justify-self: flex-end;
+    padding: 1.875rem 0;
+  }
+}
+
+.c-header__container {
+  @include from($tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.c-header__container-inner-one {
+  @include from($tablet) {
+    justify-self: flex-start;
+    max-width: 33rem;
+  }
+}
+
+.c-header__container-inner-two {
+  @include from($tablet) {
+    justify-self: flex-end;
+    padding: 3rem 0 0 2.5rem;
+  }
+}
+
+.c-header__nav-logo--big {
+  @include from($tablet) {
+    font-size: 3.75rem;
+  }
+
+  .c-header__logo-span {
+    @include from($tablet) {
+      font-size: 3.75rem;
+    }
+  }
+}
+
+.c-header__heading {
+  @include from($tablet) {
+    font-size: 2.25rem;
+  }
+}
+
+.c-header__description {
+  @include from($tablet) {
+    font-size: 1rem;
+    line-height: 1.44;
+    margin-bottom: 2.75rem;
+  }
+}
+
+.c-header__card-heading {
+  @include from($tablet) {
+    display: inline-block;
+    background-color: $color-grey-other;
+    color: $color-black-secondary;
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+    font-family: $font-primary-semi-bold;
+    text-align: center;
+  }
+}
+
+.c-header__sign-up-span {
+  @include from($tablet) {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-family: $font-primary-semi-bold;
+    color: $color-orange-primary;
+  }
+}
+
+.c-header__input-list {
+  @include from($tablet) {
+    display: flex;
+    flex-direction: column;
+    padding: 2.9rem 2.5rem;
+    background-color: $color-white-primary;
+  }
+}
+
+.c-header__brand-panel {
+  @include from($tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: unset;
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+.c-header__textual {
+  @include from($tablet) {
+    justify-self: flex-start;
+  }
+
+  @include from($desktop) {
+    max-width: 25rem;
+  }
+}
+
+.c-icon-group {
+  @include from($tablet) {
+    justify-self: flex-end;
+  }
+}
+
+//==== BETWEEN TABLET AND DESKTOP ============================================================
+
+.c-header__nav {
+  @include between($tablet, $desktop) {
+    padding: 0 3.3rem;
+  }
+}
+
+.c-header__container {
+  @include between($tablet, $desktop) {
+    padding: 5rem 3.3rem 7.3rem 3.3rem;
+  }
+}
+
+.c-header__brand-panel {
+  @include between($tablet, $desktop) {
+    padding: 1.5rem 3.5rem;
+  }
+}
+
+//==== FROM 870px ============================================================
+
+.c-icon-group {
+  .icon {
     @include from(870px) {
       width: 2.375rem;
       height: 2.375rem;
     }
+  }
+}
 
+//==== FROM DESKTOP ============================================================
+
+.c-header__textual {
+  @include from($desktop) {
+    max-width: 25rem;
+  }
+}
+
+//==== FROM DESKTOP-LARGE ============================================================
+
+.c-icon-group {
+  .icon {
     &:not(:last-of-type) {
-      margin-right: 1.5rem;
-
       @include from($desktop-large) {
         margin-right: 3rem;
       }
     }
+  }
+}
+
+//==== BETWEEN DESKTOP AND 1400px ============================================================
+
+.c-header__nav {
+  @include between($desktop, 1440px) {
+    padding: 0 5.3rem;
+  }
+}
+
+.c-header__container {
+  @include between($desktop, 1440px) {
+    padding: 7rem 5.3rem 9.3rem 5.3rem;
+  }
+}
+
+.c-header__brand-panel {
+  @include between($desktop, 1400px) {
+    padding: 1.5rem 5.3rem;
+  }
+}
+
+//==== FROM 1400px ============================================================
+
+.c-header__nav {
+  @include from(1400px) {
+    padding: 0 9.3rem;
+  }
+}
+
+.c-header__container {
+  @include from(1400px) {
+    padding: 7rem 9.3rem 9.3rem 9.3rem;
+  }
+}
+
+.c-header__brand-panel {
+  @include from(1400px) {
+    padding: 1.5rem 9.3rem;
   }
 }
