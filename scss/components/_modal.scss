@@ -34,10 +34,12 @@
 
 // The Close Button
 .c-modal__close {
+  background-color: transparent;
   color: $color-grey-primary;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  border: none;
 }
 
 .c-modal__close:hover,

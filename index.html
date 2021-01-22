@@ -45,18 +45,20 @@
             cupiditate blanditiis eaque hic sit!.
           </p>
           <div class="c-header__buttons">
-            <div class="c-button c-header__button--transparent">Download</div>
-            <div
+            <button class="c-button c-header__button--transparent">
+              Download
+            </button>
+            <button
               id="c-modal__btn"
               class="c-button c-header__button--transparent c-modal__btn"
             >
               Contact
-            </div>
+            </button>
             <div id="myModal" class="c-modal">
               <div class="c-modal__content">
-                <span class="c-modal__close">&times;</span>
+                <button class="c-modal__close">&times;</button>
                 <section class="c-contact">
-                  <div class="c-contact__form">
+                  <form class="c-contact__form">
                     <div class="c-contact__input-list">
                       <input
                         class="c-contact__input-item"
@@ -76,17 +78,18 @@
                         placeholder="Subject"
                       />
                     </div>
-                    <div class="c-contact__message">
-                      <input
-                        class="c-contact__input-item"
-                        type="text"
-                        placeholder="Message"
-                      />
-                    </div>
-                  </div>
-                  <div class="c-button c-contact__button--orange">
+                    <textarea
+                      class="c-contact__message"
+                      name="Message"
+                      id="message1"
+                      cols="30"
+                      rows="7"
+                      placeholder="Message"
+                    ></textarea>
+                  </form>
+                  <button class="c-button c-contact__button--orange">
                     Send Message
-                  </div>
+                  </button>
                 </section>
               </div>
             </div>
@@ -98,7 +101,7 @@
               Try Your <span class="c-header__sign-up-span">FREE</span> Trial
               Today
             </div>
-            <div class="c-header__input-list">
+            <form class="c-header__input-list">
               <input
                 class="c-header__input-item"
                 type="text"
@@ -118,8 +121,8 @@
                 id="password"
                 placeholder="Password"
               />
-            </div>
-            <div class="c-header__sign-up-button">Get Started</div>
+            </form>
+            <button class="c-header__sign-up-button">Get Started</button>
           </div>
         </div>
       </div>
@@ -137,31 +140,45 @@
       </div>
       <div class="c-icon-group">
         <svg class="icon">
-          <use xlink:href="/Axit/assets/svg/social-icons.svg#facebook"></use>
+          <a href="#">
+            <use xlink:href="/assets/svg/social-icons.svg#facebook"></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use xlink:href="/Axit/assets/svg/social-icons.svg#twitter (1)"></use>
+          <a href="#">
+            <use xlink:href="/assets/svg/social-icons.svg#twitter (1)"></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use
-            xlink:href="/Axit/assets/svg/social-icons.svg#google-plus-logo"
-          ></use>
+          <a href="#">
+            <use
+              xlink:href="/assets/svg/social-icons.svg#google-plus-logo"
+            ></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use
-            xlink:href="/Axit/assets/svg/social-icons.svg#pinterest-social-logo"
-          ></use>
+          <a href="#">
+            <use
+              xlink:href="/assets/svg/social-icons.svg#pinterest-social-logo"
+            ></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use
-            xlink:href="/Axit/assets/svg/social-icons.svg#instagram-symbol"
-          ></use>
+          <a href="#">
+            <use
+              xlink:href="/assets/svg/social-icons.svg#instagram-symbol"
+            ></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use xlink:href="/Axit/assets/svg/social-icons.svg#sound"></use>
+          <a href="#">
+            <use xlink:href="/assets/svg/social-icons.svg#sound"></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use xlink:href="/Axit/assets/svg/social-icons.svg#wifi"></use>
+          <a href="#">
+            <use xlink:href="/assets/svg/social-icons.svg#wifi"></use>
+          </a>
         </svg>
       </div>
     </div>
@@ -170,31 +187,81 @@
     <!-- SECTION FEATURES BEGINING -->
     <div class="c-features__container-one">
       <div class="c-features__tab-group">
-        <div class="c-features__tab-button current">tab 1</div>
-        <div class="c-features__tab-button">tab 2</div>
-        <div class="c-features__tab-button">tab 3</div>
+        <button class="c-features__tab-button current" data-tab-trigger="tab-1">
+          tab 1
+        </button>
+        <button class="c-features__tab-button" data-tab-trigger="tab-2">
+          tab 2
+        </button>
+        <button class="c-features__tab-button" data-tab-trigger="tab-3">
+          tab 3
+        </button>
       </div>
-      <div class="c-features__textual">
-        <h3 class="c-features__heading">
-          Tabs with soft transitioning effect.
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-          tenetur? Ut debitis quae recusandae officiis eaque aliquam
-          perspiciatis porro eum facilis dicta atque, quod cumque asperiores
-          velit accusantium ex laboriosam!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis,
-          incidunt!
-        </p>
-        <div class="c-button c-features__button--orange">
-          <a href="/Axit/assets/images/img-bg-header.png" download>Download</a>
+      <div class="tab">
+        <div id="tab-1" class="c-tab-content">
+          <div class="c-features__textual">
+            <h3 class="c-features__heading">
+              Tabs with soft transitioning effect. 1
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+              tenetur? Ut debitis quae recusandae officiis eaque aliquam
+              perspiciatis porro eum facilis dicta atque, quod cumque asperiores
+              velit accusantium ex laboriosam!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Blanditiis, incidunt!
+            </p>
+            <button class="c-button c-features__button--orange">
+              <a href="/assets/images/img-bg-header.png" download>Download</a>
+            </button>
+          </div>
+        </div>
+        <div id="tab-2" class="c-tab-content">
+          <div class="c-features__textual">
+            <h3 class="c-features__heading">
+              Tabs with soft transitioning effect. 2
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+              tenetur? Ut debitis quae recusandae officiis eaque aliquam
+              perspiciatis porro eum facilis dicta atque, quod cumque asperiores
+              velit accusantium ex laboriosam!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Blanditiis, incidunt!
+            </p>
+            <button class="c-button c-features__button--orange">
+              <a href="/assets/images/img-bg-header.png" download>Download</a>
+            </button>
+          </div>
+        </div>
+        <div id="tab-3" class="c-tab-content">
+          <div class="c-features__textual">
+            <h3 class="c-features__heading">
+              Tabs with soft transitioning effect. 3
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+              tenetur? Ut debitis quae recusandae officiis eaque aliquam
+              perspiciatis porro eum facilis dicta atque, quod cumque asperiores
+              velit accusantium ex laboriosam!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Blanditiis, incidunt!
+            </p>
+            <button class="c-button c-features__button--orange">
+              <a href="/assets/images/img-bg-header.png" download>Download</a>
+            </button>
+          </div>
         </div>
       </div>
       <img
         class="c-features-img"
-        src="/Axit/assets/images/img-features-one.png"
+        src="/assets/images/img-features-one.png"
         alt="Buildings"
       />
     </div>
@@ -202,7 +269,7 @@
     <div class="c-features__container-two">
       <img
         class="c-features-img"
-        src="/Axit/assets/images/img-features-two.png"
+        src="/assets/images/img-features-two.png"
         alt="Roofs"
       />
       <div class="c-features__textual">
@@ -218,7 +285,7 @@
           <div class="c-icon c-features__icon--small">
             <img
               class="c-features__icon--small-image"
-              src="/Axit//assets/svg/svg-cloud.svg"
+              src="/assets/svg/svg-cloud.svg"
               alt="Cloud"
             />
           </div>
@@ -235,7 +302,7 @@
           <div class="c-icon c-features__icon--small">
             <img
               class="c-features__icon--small-image"
-              src="/Axit//assets/svg/svg-cloud.svg"
+              src="/assets/svg/svg-cloud.svg"
               alt="CloudUp"
             />
           </div>
@@ -268,7 +335,7 @@
       </div>
       <img
         class="c-features-img"
-        src="/Axit/assets/images/img-features-three.png"
+        src="/assets/images/img-features-three.png"
         alt="Skyscrapers"
       />
     </div>
@@ -284,7 +351,7 @@
           <div class="c-icon c-process__icon--big">
             <img
               class="c-process__icon--big-image"
-              src="/Axit//assets/svg/svg-light.svg"
+              src="/assets/svg/svg-light.svg"
               alt="Light"
             />
           </div>
@@ -299,7 +366,7 @@
           <div class="c-icon c-process__icon--big">
             <img
               class="c-process__icon--big-image"
-              src="/Axit//assets/svg/svg-keyboard.svg"
+              src="/assets/svg/svg-keyboard.svg"
               alt="Keyboard"
             />
           </div>
@@ -314,7 +381,7 @@
           <div class="c-icon c-process__icon--big">
             <img
               class="c-process__icon--big-image"
-              src="/Axit//assets/svg/svg-bolt.svg"
+              src="/assets/svg/svg-bolt.svg"
               alt="Bolt"
             />
           </div>
@@ -341,14 +408,14 @@
             <span class="c-price-sign">&#36;</span>0
           </div>
           <div class="c-price-text">Free for Life</div>
-          <div class="c-pricing__card-list">
-            <li>1 gb of space</li>
-            <li>10 gb of bandwidth</li>
-            <li>3 websites</li>
-            <li>basic customization</li>
-            <li>wordpress integration</li>
-            <li>email support</li>
-          </div>
+          <ul class="c-pricing__card-list">
+            <li><p>3 gb of space</p></li>
+            <li><p>0 gb of bandwidth</p></li>
+            <li><p>3 websites</p></li>
+            <li><p>basic customization</p></li>
+            <li><p>wordpress integration</p></li>
+            <li><p>email support</p></li>
+          </ul>
         </div>
         <div class="c-pricing__card-group c-pricing__card-popular">
           <h4 class="c-pricing__card-heading">Professional</h4>
@@ -357,14 +424,14 @@
           </div>
           <div class="c-price-text">Monthly payment</div>
           <div class="c-pricing__offer">our most popular</div>
-          <div class="c-pricing__card-list">
-            <li>5 gb of space</li>
-            <li>50 gb of bandwidth</li>
-            <li>12 websites</li>
-            <li>advanced customization</li>
-            <li>wordpress integration</li>
-            <li>email support</li>
-          </div>
+          <ul class="c-pricing__card-list">
+            <li><p>5 gb of space</p></li>
+            <li><p>50 gb of bandwidth</p></li>
+            <li><p>12 websites</p></li>
+            <li><p>advanced customization</p></li>
+            <li><p>wordpress integration</p></li>
+            <li><p>email support</p></li>
+          </ul>
         </div>
         <div class="c-pricing__card-group">
           <h4 class="c-pricing__card-heading">Enterprise</h4>
@@ -372,14 +439,14 @@
             <span class="c-price-sign">&#36;</span>70
           </div>
           <div class="c-price-text">Monthly payment</div>
-          <div class="c-pricing__card-list">
-            <li>unlimited space</li>
-            <li>unlimited bandwidth</li>
-            <li>100 websites</li>
-            <li>advanced customization</li>
-            <li>wordpress integration</li>
-            <li>24/7 customer support</li>
-          </div>
+          <ul class="c-pricing__card-list">
+            <li><p>unlimited space</p></li>
+            <li><p>unlimited bandwidth</p></li>
+            <li><p>100 websites</p></li>
+            <li><p>advanced customization</p></li>
+            <li><p>wordpress integration</p></li>
+            <li><p>24/7 customer support</p></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -403,7 +470,7 @@
           </div>
           <div class="c-testimonials__customer">
             <div class="c-testimonials__img">
-              <img src="/Axit/assets/images/img-customer.png" alt="Customer" />
+              <img src="/assets/images/img-customer.png" alt="Customer" />
             </div>
             <div class="c-testimonials__person">
               <p class="c-testimonials__name">Jeremy H.</p>
@@ -424,7 +491,7 @@
           </div>
           <div class="c-testimonials__customer">
             <div class="c-testimonials__img">
-              <img src="/Axit/assets/images/img-customer.png" alt="Customer" />
+              <img src="/assets/images/img-customer.png" alt="Customer" />
             </div>
             <div class="c-testimonials__person">
               <p class="c-testimonials__name">John S.</p>
@@ -445,7 +512,7 @@
           </div>
           <div class="c-testimonials__customer">
             <div class="c-testimonials__img">
-              <img src="/Axit/assets/images/img-customer.png" alt="Customer" />
+              <img src="/assets/images/img-customer.png" alt="Customer" />
             </div>
             <div class="c-testimonials__person">
               <p class="c-testimonials__name">Susan W.</p>
@@ -465,16 +532,16 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quas
         tenetur quam cum ex.
       </p>
-      <div class="c-button c-custom__button--transparent">Download</div>
+      <button class="c-button c-custom__button--transparent">Download</button>
     </section>
     <!-- SECTION CUSTOM END -->
 
     <!-- SECTION CONTACT BEGINING -->
     <section class="c-contact">
-      <h2 class="c-contact_heading">stylish axure design</h2>
+      <h2 class="c-contact_heading">contact</h2>
       <div class="c-divider c-divider--orange"></div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <div class="c-contact__form">
+      <form class="c-contact__form">
         <div class="c-contact__input-list">
           <input class="c-contact__input-item" type="text" placeholder="Name" />
           <input
@@ -490,15 +557,16 @@
             placeholder="Subject"
           />
         </div>
-        <div class="c-contact__message">
-          <input
-            class="c-contact__input-item"
-            type="text"
-            placeholder="Message"
-          />
-        </div>
-      </div>
-      <div class="c-button c-contact__button--orange">Send Message</div>
+        <textarea
+          class="c-contact__message"
+          name="Message"
+          id="message"
+          cols="30"
+          rows="7"
+          placeholder="Message"
+        ></textarea>
+      </form>
+      <button class="c-button c-contact__button--orange">Send Message</button>
     </section>
     <!-- SECTION CONTACT END -->
 
@@ -506,31 +574,45 @@
     <footer class="c-footer">
       <div class="c-icon-group">
         <svg class="icon">
-          <use xlink:href="/Axit/assets/svg/social-icons.svg#facebook"></use>
+          <a href="#">
+            <use xlink:href="/assets/svg/social-icons.svg#facebook"></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use xlink:href="/Axit/assets/svg/social-icons.svg#twitter (1)"></use>
+          <a href="#">
+            <use xlink:href="/assets/svg/social-icons.svg#twitter (1)"></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use
-            xlink:href="/Axit/assets/svg/social-icons.svg#google-plus-logo"
-          ></use>
+          <a href="#">
+            <use
+              xlink:href="/assets/svg/social-icons.svg#google-plus-logo"
+            ></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use
-            xlink:href="/Axit/assets/svg/social-icons.svg#pinterest-social-logo"
-          ></use>
+          <a href="#">
+            <use
+              xlink:href="/assets/svg/social-icons.svg#pinterest-social-logo"
+            ></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use
-            xlink:href="/Axit/assets/svg/social-icons.svg#instagram-symbol"
-          ></use>
+          <a href="#">
+            <use
+              xlink:href="/assets/svg/social-icons.svg#instagram-symbol"
+            ></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use xlink:href="/Axit/assets/svg/social-icons.svg#sound"></use>
+          <a href="#">
+            <use xlink:href="/assets/svg/social-icons.svg#sound"></use>
+          </a>
         </svg>
         <svg class="icon">
-          <use xlink:href="/Axit/assets/svg/social-icons.svg#wifi"></use>
+          <a href="#">
+            <use xlink:href="/assets/svg/social-icons.svg#wifi"></use>
+          </a>
         </svg>
       </div>
       <p><span>&copy;</span>2015 Axure Themes</p>

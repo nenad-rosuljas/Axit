@@ -1,24 +1,8 @@
 .c-custom {
-  background-image: url("/Axit/assets/images/img-bg-custom.png");
+  background-image: url("/assets/images/img-bg-custom.png");
   background-color: rgba(0, 0, 0, 0.9);
   text-align: center;
   padding: 2.25rem 1.5rem 2.25rem 1.5rem;
-
-  @include between($tablet, $desktop) {
-    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
-  }
-
-  @include between($desktop, $desktop-large) {
-    padding: 3.25rem 5.3rem 2.125rem 5.3rem;
-  }
-
-  @include between($desktop-large, 1400px) {
-    padding: 4.25rem 5.3rem 3.125rem 5.3rem;
-  }
-
-  @include from(1400px) {
-    padding: 5rem 9.3rem 4rem 9.3rem;
-  }
 
   p {
     color: $color-white-primary;
@@ -36,10 +20,42 @@
 .c-custom__button--transparent {
   margin: 1rem auto;
   margin-top: 2rem;
+  background-color: transparent;
 
   &:hover {
     transition: 0.3s;
     background-color: $color-grey-primary;
     cursor: pointer;
+  }
+}
+
+// ==============================================================================================
+// ==============================================================================================
+// MEDIA QUERIES
+
+//==== FROM TABLET ================================================================
+
+//==== BETWEEN TABLET AND DESKTOP ============================================================
+.c-custom {
+  @include between($tablet, $desktop) {
+    padding: 2.25rem 3.5rem 2.25rem 3.5rem;
+  }
+}
+//==== BETWEEN DESKTOP AND DESKTOP-LARGE ============================================================
+.c-custom {
+  @include between($desktop, $desktop-large) {
+    padding: 3.25rem 5.3rem 2.125rem 5.3rem;
+  }
+}
+//==== BETWEEN DESKTOP-LARGE AND 1400px ============================================================
+.c-custom {
+  @include between($desktop-large, 1400px) {
+    padding: 4.25rem 5.3rem 3.125rem 5.3rem;
+  }
+}
+//==== FROM 1400px ============================================================
+.c-custom {
+  @include from(1400px) {
+    padding: 5rem 9.3rem 4rem 9.3rem;
   }
 }
